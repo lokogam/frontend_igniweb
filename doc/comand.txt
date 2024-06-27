@@ -1,0 +1,7 @@
+docker-compose up -d
+docker exec -it frontend bash
+npm i && npm run dev
+
+git remote add origin https://github.com/lokogam/frontend_igniweb.git
+git branch -M main
+git push -u origin main
