@@ -28,6 +28,11 @@ const routes = [
     path: "/books/:id/reserve",
     name: "BookReserve",
     component: () => import("../components/BookReserve.vue"),
+  },
+  {
+    path: "/user-reserved-books",
+    name: "UserReservedBooks",
+    component: () => import("../components/UserReservedBooks.vue"),
   }
 ];
 

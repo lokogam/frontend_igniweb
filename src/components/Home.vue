@@ -8,6 +8,7 @@ const authStore = useAuthStore();
 onMounted(async () => {
   await authStore.getUser();
 });
+
 </script>
 <template>
   <div class="max-w-7xl mx-auto">

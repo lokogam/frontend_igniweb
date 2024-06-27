@@ -12,6 +12,8 @@ export const useReservationStore = defineStore("reservations", {
       try {
         const response = await axios.get("/api/reservations");
         this.reservations = response.data;
+        console.log('data',this.reservations);
+        return this.reservations;
       } catch (error) {
         console.error("Error al obtener las reservas:", error);
       }

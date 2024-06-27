@@ -74,10 +74,10 @@ const authStore = useAuthStore();
           </li>
           <li>
             <router-link
-              :to="{ name: 'Home' }"
+              :to="{ name: 'UserReservedBooks' }"
               class="block rounded py-2 pr-4 pl-3 text-white"
               aria-current="page"
-              >reservations</router-link
+              >Reservations</router-link
             >
           </li>
             <button

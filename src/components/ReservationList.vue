@@ -71,7 +71,7 @@ export default defineComponent({
         if (!book.value) {
           throw new Error("Book is not loaded yet");
         }
-        if (book.value.reservations.status === "active") {
+        if (book.value.reservations?.status === "Active") {
           console.log('YA ESTE RESERVADO ');
           return;
         }
@@ -79,7 +79,7 @@ export default defineComponent({
           book_id: book.value.id,
           user_id: authStore.user.id,
           reservation_days: days.value,
-          status: "active",
+          status: "Active",
         };
         await reservationStore.createReservation(data);
         console.log('Reservation created successfully');
