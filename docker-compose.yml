@@ -3,9 +3,9 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./
       dockerfile: Dockerfile
-    container_name: bankapp_frontend
+    container_name: frontend_igniweb
     restart: always
     ports:
       - 8000:8000
