@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div class="container mx-auto p-4">
-      <h1 v-if="user" class="text-3xl font-bold mb-6">Welcome, {{ user.name }}</h1>
+  <section class="bg-[#F4F7FF] py-20 lg:py-[120px]">
+    <!-- <h1 v-if="user" class="text-3xl font-bold mb-6">Welcome, {{ user.name }}</h1> -->
       <ReservationList v-if="book" :book="book"  :key="book.id"/>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>

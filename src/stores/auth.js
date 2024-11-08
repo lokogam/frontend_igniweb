@@ -69,8 +69,13 @@ export const useAuthStore = defineStore("auth", {
       }
     },
     async handleLogout() {
-      await axios.post("/logout");
-      this.authUser = null;
+       try {
+         await axios.post("/logout");
+         this.authUser = null; // Limpia el usuario autenticado
+         this.router.push("/");// Redirige al login
+       } catch (error) {
+         console.error("Error al cerrar sesión:", error);
+       }
     },
     async handleForgotPassword(email) {
       this.authErrors = [];

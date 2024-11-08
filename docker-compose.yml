@@ -1,14 +1,13 @@
-version: "3.4"
+version: '3.8'
+
 services:
   frontend:
-    image: node:alpine
-    container_name: frontend
-    entrypoint: /bin/sh
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: bankapp_frontend
+    restart: always
     ports:
       - 8000:8000
-    working_dir: /srv/app
-    volumes:
-      - type: bind
-        source: ./
-        target: /srv/app
-    tty: true
+    # volumes:
+      # - ./frontend:/usr/src/app
